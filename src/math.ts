@@ -1,5 +1,11 @@
-function sum(a: number, b: number): number {
-  return a + b;
+function sum(a?: number, b?: number): number | undefined {
+  if (a && b) return a + b;
+  return undefined;
 }
 
-export { sum };
+function subtract(a?: number, b?: number): number | undefined {
+  if (a && b) return a - b;
+  return undefined;
+}
+
+export { sum, subtract };
